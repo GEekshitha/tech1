@@ -1,0 +1,92 @@
+<html>
+<style>
+body{
+            background-color: #91d1ff;
+        }
+</style>
+
+<body>
+<div id="gallery-text">
+
+    <div id="gallery-text-left" style="float:left">
+    <p id="gallery-text-quote-left" style="font-family:Century Gothic; color: blue"><b>Program in C</b></p> 
+    <p id="gallery-paragraph-1" style="font-family:Georgia">
+    #include<stdio.h><br>
+#include<conio.h><br>
+int main()<br>
+{<br>
+    int n1, n2, i, temp, rem, sum, prod;<br>
+    printf("Enter the value of n1 (starting three-digit number): ");<br>
+    scanf("%d", &n1);<br>
+    printf("Enter the value of n2 (ending three-digit number): ");<br>
+    scanf("%d", &n2);<br>
+    printf("\n");<br>
+    for(i=n1; i<=n2; i++)<br>
+    {<br>
+        sum = 0;<br>
+        temp = i;<br>
+        while(temp>0)<br>
+        {<br>
+            rem = temp%10;<br>
+            sum = sum + (rem*rem*rem);<br>
+            temp = temp/10;<br>
+        }<br>
+        if(sum == i)<br>
+            printf("%d is an Armstrong number.\n", i);<br>
+    }<br>
+    getch();<br>
+    return 0;<br>
+}<br>
+    </p>
+    </div>
+
+    <div id="gallery-text-right" style="float:right">
+    <p id="gallery-text-quote-right" style="font-family:Century Gothic; color: red"><b>Program in Java</b></p>
+    <p id="gallery-paragraph-2" style="font-family:Georgia">
+package in.bench.resources.java.armstrong.number;<br>
+ 
+public class ArmstrongNumber {<br>
+    public static void main(String[] args) {<br>
+ 
+        System.out.println("1.Check for number 153 \n"<br>
+                + checkArmstrongNumber(153));<br>
+ 
+        System.out.println("\n2.Check for number 1634 \n"<br>
+                + checkArmstrongNumber(1634));<br>
+ 
+        System.out.println("\n3.Check for number 1234 \n"<br>
+                + checkArmstrongNumber(1234));<br>
+    }<br>
+ 
+    public static String checkArmstrongNumber(int number) {<br>
+ 
+        int remainder = 0;<br>
+        int result = 0;<br>
+        int length = 0;<br>
+        int dividend = number;<br>
+ 
+        length = String.valueOf(number).length();<br>
+        while(number > 0) {<br>
+            remainder = number % 10;<br>
+            number = number / 10;<br> 
+            int tempMul = 1; <br>
+            for(int index=0; index<length; index++) {<br>
+                tempMul = tempMul * remainder; <br>
+            }<br>
+ 
+            result = result + tempMul; <br>
+        }<br>
+        if(dividend == result) {<br>
+            return dividend + " is a Armstrong number";<br>
+        }<br>
+        else {<br>
+            return dividend + " is not a Armstrong number";<br>
+        }
+    }
+}<br>
+
+    </p>
+    </div>
+</div>
+</body>
+</html>
